@@ -1,21 +1,11 @@
-## ЛР5 — JSON и конвертации (JSON↔CSV, CSV→XLSX): Техническое задание
-## ЗАДАНИЕ
-## Задание A — JSON ↔ CSV
+## [Lab01](./src/lab01/)
 
-![](../../img/lab05/Json_csvA1.png)
+## [Lab02](./src/lab02/)
 
-![](../../img/lab05/Json_csvA2.png)
+## [Lab03](./src/lab03/)
 
-![](../../img/lab05/Json_csvA3.png)
+## [Lab04](./src/lab04/)
 
-![](../../img/lab05/people_from_json_csv)
+## [Lab05](./src/lab05/)
 
-![](../../img/lab05/people_from(cvs_json))
 
-## Задание B — CSV → XLSX
-
-![](../..img/lab05/csv_xlsxp.y.png)
-
-![](../../img/lab05/csv_xlsx2)
-
-![](../../img/img/lab05/People csv)
