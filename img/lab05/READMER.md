@@ -8,14 +8,17 @@
 
 ![](../../img/lab05/Json_csvA3.png)
 
-![](../../img/lab05/people_from_json_csv)
+![](../../img/lab05/cvs_JsonA4.png)
 
-![](../../img/lab05/people_from(cvs_json))
+![](../../img/lab05/Json_csvA5.png)
+
 
 ## Задание B — CSV → XLSX
 
-![](../..img/lab05/csv_xlsxp.y.png)
+![](../../img/lab05/csv_xlsxp.png)
 
-![](../../img/lab05/csv_xlsx2)
+![](../../img/lab05/csv_xlsx2.png)
 
-![](../../img/img/lab05/People csv)
+![](../../img/lab05/people_csv.png)
+
+![](../../img/lab05/people%20xlsx.png)

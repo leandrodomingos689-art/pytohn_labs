@@ -1,4 +1,5 @@
-nome,idade,cidade
-Ana,25,São Paulo
-João,30,Rio de janeiro
-Maria,28,Belo Horizonte
+[
+{"nome": "Ana","idade": 25,"cidade": "São Paulo"},
+{"nome": "João","idade": 30,"cidade": "Rio de janeiro"},
+{"nome": "Maria","idade": 28,"cidade": "Belo Horizonte"}
+]
