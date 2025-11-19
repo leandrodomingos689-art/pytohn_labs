@@ -51,4 +51,4 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
     # Сохранение
     wb.save(xlsx_path) 
 
-csv_to_xlsx("data/sample/people.csv", 'data/out/people.xlsx')
+#csv_to_xlsx("data/sample/people.csv", 'data/out/people.xlsx')

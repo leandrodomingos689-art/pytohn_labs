@@ -101,7 +101,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     
 # Testar conversão CSV para JSON
 #Тестирование преобразования CSV в JSON
-csv_to_json("data/sample/people.csv", 'data/out/people_from_csv.json')
+#csv_to_json("data/sample/people.csv", 'data/out/people_from_csv.json')
 
     
    
