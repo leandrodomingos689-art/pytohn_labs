@@ -1,12 +1,12 @@
 import sys
 import os
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
-from lib.text import tokenize, count_freq, top_n
+from library.text import tokenize, count_freq, top_n
 
 if __name__ == "__main__":
-    
+
     text = input("Digite ou cole um texto:\n> ")
     words = tokenize(text)
     freqs = count_freq(words)

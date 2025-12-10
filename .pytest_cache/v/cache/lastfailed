@@ -1,0 +1,3 @@
+{
+  "tests/test_text.py::test_normalize[\\u0451\\u0436\\u0438\\u043a, \\u0401\\u043b\\u043a\\u0430-\\u0435\\u0436\\u0438\\u043a, \\u0435\\u043b\\u043a\\u0430]": true
+}

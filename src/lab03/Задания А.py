@@ -1,12 +1,12 @@
 import sys
 import os
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 from lib.text import normalize, tokenize, count_freq, top_n
 
 print(normalize("ПрИвЕт\nМИр\t"))
-print(normalize("ёжик, Ёлка"))
+print(normalize("ёжик, Ёмкость"))
 print(normalize("Hello\r\nWorld"))
 print(normalize("  двойные   пробелы  "))
 
@@ -22,4 +22,3 @@ top = top_n(freq, 2)
 print(f"Tokens: {tokens}")
 print(f"Frequências: {freq}")
 print(f"Top 2: {top}")
-    

@@ -1,7 +1,7 @@
 fio_input = input("ФИО: ").strip()
 
 # Убираем лишние пробелы между словами
-fio_clean = ' '.join(fio_input.split())
+fio_clean = " ".join(fio_input.split())
 
 # Получаем инициалы
 parts = fio_clean.split()
@@ -14,4 +14,3 @@ for part in parts:
 # Выводим результат
 print(f"Инициалы: {initials}.")
 print(f"Длина (символов): {len(fio_clean)}")
-
