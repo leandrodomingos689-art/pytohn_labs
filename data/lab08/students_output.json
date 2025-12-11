@@ -1,0 +1,20 @@
+[
+  {
+    "fio": "Sebastião Leandro João Domingos",
+    "birthdate": "2004-06-19",
+    "group": "БИВТ-6",
+    "gpa": 4.1
+  },
+  {
+    "fio": "Marcela Leandro João Domingos",
+    "birthdate": "1999-09-30",
+    "group": "A-50",
+    "gpa": 4.3
+  },
+  {
+    "fio": "Domingas Leandro João",
+    "birthdate": "1998-10-20",
+    "group": "M-6",
+    "gpa": 4.2
+  }
+]
