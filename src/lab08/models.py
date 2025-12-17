@@ -1,8 +1,9 @@
-
 from dataclasses import dataclass
 import datetime
 
 
+# Decorator to automatically generate __init__ and __post_init__ methods.
+# And armazenates datas (students' data)
 @dataclass
 class Student:
     fio: str
@@ -19,7 +20,6 @@ class Student:
         """
         # Add proper validation of date format and gpa range (YYYY-MM-DD)
         try:
-            # datetime.strptime(self.birthdate, "%Y/%m/%d")
             # String birthdate -> Python object ISO Fortmat for DateAndTime
             birth_date_obj = datetime.date.fromisoformat(self.birthdate)
         except ValueError:
@@ -30,8 +30,10 @@ class Student:
             )
         if datetime.date.today() < birth_date_obj:
             raise ValueError(
-                "Invalid date range. Date of birth cannot be later than today's date."
+                "Invalid date range. Date of birth cannot be later or equals to today's date."
             )
+        if not isinstance(self.gpa, float):
+            self.gpa = float(self.gpa)
         if not (0.0 <= self.gpa <= 5.0):
             raise ValueError("gpa must be between 0.0 and 5.0")
 
@@ -57,7 +59,7 @@ class Student:
             "gpa": self.gpa,
         }
 
-    @classmethod  # Allows you to create a new instance of Student from an existing dictionary.
+    @classmethod  # Allows to create a new instance of Student from an existing dictionary.
     def from_dict(cls, d: dict):
         """
         Deserializes a dictionary into a Student object.
@@ -77,3 +79,63 @@ class Student:
             f" Age: {self.age()} years old\n"
             f" GPA: {self.gpa:.2f}"
         )
+
+
+# -----------------------------------------------#
+# ------------- VALIDATIONS----------------------#
+# -----------------------------------------------#
+
+# ----------  Success test - ALL OK -------------#
+if __name__ == "__main__":
+    print("--- Successfull Test ---")
+    try:
+        student1 = Student(
+            fio="Давид Гонсалу Лауринду",
+            birthdate="2010-12-15",
+            group="БИВТ-6",
+            gpa=4.2,
+        )
+        print(f" {student1}")
+        # ---------- Serializations test -----------------------#
+        student_dict = student1.to_dict()  # Serialization
+        print(f"\nSerialized to dict: {student_dict}")
+        # Disserializations test (Creates a new object from the dict.)
+        student2 = Student.from_dict(
+            student_dict
+        )  # Disserialize from the existing dictionary.
+        print(f"Desserialized (str):\n {student2}")
+    except ValueError as e:
+        print(f"Error in the success test: {e}")
+    # ----------  Wrong GPA - MUST RAISE GPA ERROR -------------#
+    print("\n--- Error Test (Invalid GPA) ---")
+    try:
+        student_invalid_gpa = Student(
+            fio="Давид Гонсалу Лауринду",
+            birthdate="2010-01-01",
+            group="БИВТ-6",
+            gpa=5.5,  # Wrong GPA
+        )
+    except ValueError as e:
+        print(f"Expected validation error captured: {e}")
+    # ---------- Wrong Date format - MUST RAISE Date Error -------#
+    print("\n--- Error Test (Invalid Date format) ---")
+    try:
+        student_invalid_date_format = Student(
+            fio="Давид Гонсалу Лауринду",
+            birthdate="23000-01-01",  # (or 2010/05/15) - Invalid, must be an ISO format.
+            group="БИВТ-6",
+            gpa=4.0,
+        )
+    except ValueError as e:
+        print(f"Expected validation error captured: {e}")
+    # ---------- Wrong Date range - MUST RAISE Date Error -------#
+    print("--- Error Test (Wrong Date range) ---")
+    try:
+        student_invalid_date_range = Student(
+            fio="Давид Гонсалу Лауринду",
+            birthdate="2026-12-11",
+            group="БИВТ-6",
+            gpa=4.2,
+        )
+    except ValueError as e:
+        print(f"Expected validation error captured: {e}")

@@ -72,7 +72,8 @@ def flatten(mat: list[list | tuple]) -> list:
 
 
 ###############################################################
-print(min_max([3, -1, 5, 5, 0]))
-print(unique_sorted([3, 1, 2, 1, 3]))
-# print(flatten([[1, 2], [3, 4]]))
-print(flatten([[1, 2], "ab"]))
+if __name__=="__main__":
+    print(min_max([3, -1, 5, 5, 0]))
+    print(unique_sorted([3, 1, 2, 1, 3]))
+    print(flatten([[1, 2], [3, 4]]))
+    print(flatten([[1, 2], "ab"]))
